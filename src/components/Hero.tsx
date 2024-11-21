@@ -8,12 +8,32 @@ const moonPhases = ['🌑', '🌒', '🌓', '🌔', '🌕', '🌖', '🌗', '�
 
 export default function Hero() {
   const [currentPhase, setCurrentPhase] = useState(0);
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPhase((prev) => (prev + 1) % moonPhases.length);
     }, 2000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Initialize window size
+    setWindowSize({
+      width: globalThis.window?.innerWidth || 0,
+      height: globalThis.window?.innerHeight || 0
+    });
+
+    // Update window size on resize
+    const handleResize = () => {
+      setWindowSize({
+        width: globalThis.window?.innerWidth || 0,
+        height: globalThis.window?.innerHeight || 0
+      });
+    };
+
+    globalThis.window?.addEventListener('resize', handleResize);
+    return () => globalThis.window?.removeEventListener('resize', handleResize);
   }, []);
 
   const buttonVariants = {
@@ -51,12 +71,12 @@ export default function Hero() {
             className="absolute h-2 w-2 bg-purple-500/30 rounded-full"
             animate={{
               x: [
-                Math.random() * window.innerWidth,
-                Math.random() * window.innerWidth
+                Math.random() * (windowSize.width || 1000),
+                Math.random() * (windowSize.width || 1000)
               ],
               y: [
-                Math.random() * window.innerHeight,
-                Math.random() * window.innerHeight
+                Math.random() * (windowSize.height || 800),
+                Math.random() * (windowSize.height || 800)
               ],
             }}
             transition={{
@@ -65,8 +85,8 @@ export default function Hero() {
               ease: "linear"
             }}
             style={{
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}
           />
         ))}

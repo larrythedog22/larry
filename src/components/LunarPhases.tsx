@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { FaMoon } from 'react-icons/fa';
 
 const phases = [
   {
