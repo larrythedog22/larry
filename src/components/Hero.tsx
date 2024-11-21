@@ -8,7 +8,7 @@ const moonPhases = ['🌑', '🌒', '🌓', '🌔', '🌕', '🌖', '🌗', '�
 
 export default function Hero() {
   const [currentPhase, setCurrentPhase] = useState(0);
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+  const [windowSize, setWindowSize] = useState({ width: 1000, height: 800 });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,22 +18,24 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    // Initialize window size
-    setWindowSize({
-      width: globalThis.window?.innerWidth || 0,
-      height: globalThis.window?.innerHeight || 0
-    });
-
-    // Update window size on resize
-    const handleResize = () => {
+    if (typeof window !== 'undefined') {
+      // Initialize window size
       setWindowSize({
-        width: globalThis.window?.innerWidth || 0,
-        height: globalThis.window?.innerHeight || 0
+        width: window.innerWidth,
+        height: window.innerHeight
       });
-    };
 
-    globalThis.window?.addEventListener('resize', handleResize);
-    return () => globalThis.window?.removeEventListener('resize', handleResize);
+      // Update window size on resize
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight
+        });
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   const buttonVariants = {
