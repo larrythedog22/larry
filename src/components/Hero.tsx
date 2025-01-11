@@ -171,21 +171,27 @@ export default function Hero() {
             variants={textVariants}
             className="flex flex-wrap justify-center gap-4"
           >
-            <motion.button
+            <motion.a
+              href="https://app.uniswap.org/swap?chain=optimism&inputCurrency=NATIVE&outputCurrency=0xad984fbd3fb10d0b47d561be7295685af726fdb3"
+              target="_blank"
+              rel="noopener noreferrer"
               variants={buttonVariants}
               whileHover="hover"
               className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-bold text-lg transition-colors shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40"
             >
               Buy $LARRY 🌕
-            </motion.button>
+            </motion.a>
             
-            <motion.button
+            <motion.a
+              href="https://twitter.com/LarryTalbotXYZ"
+              target="_blank"
+              rel="noopener noreferrer"
               variants={buttonVariants}
               whileHover="hover"
               className="px-8 py-4 bg-transparent border-2 border-purple-500 text-white rounded-full font-bold text-lg transition-colors hover:bg-purple-500/10"
             >
               Join the Pack 🐺
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Feature Grid */}

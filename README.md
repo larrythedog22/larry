@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Larry Talbot ($LARRY) Website
 
-## Getting Started
+A modern, responsive website for the $LARRY token, built with Next.js 14, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Features
 
+- **Modern Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Responsive Design**: Fully responsive UI that works on all devices
+- **Animations**: Smooth animations using Framer Motion
+- **Performance**: Optimized for fast loading and performance
+- **Type Safety**: Full TypeScript implementation for better development experience
+
+## Quick Start
+
+1. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+2. Set up your environment variables:
+```bash
+cp .env.example .env.local
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) to view the site
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Development**: 
+  - ESLint
+  - Prettier
+  - TypeScript strict mode
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                # Next.js app router pages
+├── components/         # React components
+│   ├── About.tsx      # About section
+│   ├── Community.tsx  # Community section
+│   ├── Hero.tsx      # Hero section
+│   ├── HowToBuy.tsx  # How to buy section
+│   └── ...
+├── styles/            # Global styles
+└── types/             # TypeScript type definitions
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Website**: [larrytalbot.xyz](https://larrytalbot.xyz)
+- **Twitter**: [@LarryTalbotXYZ](https://twitter.com/LarryTalbotXYZ)
+- **Telegram**: [t.me/LarryTalbotXYZ](https://t.me/LarryTalbotXYZ)
+- **Buy $LARRY**: [Uniswap](https://app.uniswap.org/swap?chain=optimism&inputCurrency=NATIVE&outputCurrency=0xad984fbd3fb10d0b47d561be7295685af726fdb3)
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

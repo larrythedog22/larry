@@ -7,21 +7,21 @@ const socialLinks = [
   {
     name: 'Telegram',
     icon: FaTelegram,
-    url: 'https://t.me/Larrytalboteth',
+    url: 'https://t.me/LarryTalbotXYZ',
     color: 'hover:bg-blue-500/20',
     description: "Join the pack's main den 🐺"
   },
   {
     name: 'Twitter',
     icon: FaTwitter,
-    url: 'https://twitter.com/Larrytalboteth',
+    url: 'https://twitter.com/LarryTalbotXYZ',
     color: 'hover:bg-sky-500/20',
     description: 'Howl with us on Twitter 🌙'
   },
   {
     name: 'Discord',
     icon: FaDiscord,
-    url: 'https://discord.gg/Larrytalboteth',
+    url: 'https://discord.gg/LarrytalbotXYZ',
     color: 'hover:bg-indigo-500/20',
     description: 'Run with the pack 🐾'
   }
@@ -144,7 +144,7 @@ export default function Community() {
             className="inline-flex items-center gap-3 px-8 py-4 bg-purple-600/20 rounded-full border border-purple-500/20"
           >
             <span className="text-purple-400 text-2xl">🐺</span>
-            <span className="text-white font-medium text-xl">@Larrytalboteth</span>
+            <span className="text-white font-medium text-xl">@LarryTalbotXYZ</span>
             <FaMoon className="text-purple-400 w-5 h-5" />
           </motion.div>
           <p className="text-gray-400 mt-4">

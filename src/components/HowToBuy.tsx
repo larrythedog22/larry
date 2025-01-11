@@ -17,8 +17,8 @@ export default function HowToBuy() {
     },
     {
       icon: FaRocket,
-      title: "Buy on Virtuals.io",
-      description: "Click the Buy button to go to Virtuals.io and make your purchase directly!"
+      title: "Buy on Uniswap",
+      description: "Click the Buy button to go to Uniswap and make your purchase directly!"
     }
   ];
 
@@ -72,12 +72,12 @@ export default function HowToBuy() {
           className="mt-12 text-center"
         >
           <a
-            href="https://fun.virtuals.io/agents/0x90F7269fF7b816F9efA0D649191DB17A84ed3939"
+            href="https://app.uniswap.org/swap?chain=optimism&inputCurrency=NATIVE&outputCurrency=0xad984fbd3fb10d0b47d561be7295685af726fdb3"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-medium text-xl transition-all duration-300 transform hover:scale-105"
           >
-            Buy on Virtuals.io
+            Buy on Uniswap
             <FaRocket className="w-6 h-6" />
           </a>
         </motion.div>

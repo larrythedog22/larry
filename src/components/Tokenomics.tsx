@@ -78,7 +78,7 @@ export default function Tokenomics() {
             Larry's Token Treasury 🐺
           </h2>
           <p className="text-xl text-purple-300 max-w-3xl mx-auto">
-            Total Pack Size: 1,000,000,000 $LARRY 🌕
+            Total Pack Size: 1,000,000,000,000,000 $LARRY 🌕
           </p>
           <p className="text-purple-400 mt-2">
             (That's a lot of howls!)
